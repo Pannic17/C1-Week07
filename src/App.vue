@@ -235,6 +235,8 @@ onMounted (() => {
     <div id="three-canvas"></div>
   </div>
   <div>
+    Serial Generation of Cloud, Road and Buildings.<br>
+    Added SSR and tone-mapping to adjust visual effects.<br>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" className="logo" alt="Vite logo"/>
     </a>
