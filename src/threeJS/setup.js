@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import {render} from "vue";
 
 export function setupScene (unit) {
     let canvas = document.getElementById('three-canvas');
@@ -27,6 +28,9 @@ export function setupScene (unit) {
     }
     // @ts-ignore
     canvas.appendChild( renderer.domElement );
+
+    renderer.toneMapping = THREE.LinearToneMapping;
+    // renderer.toneMappingExposure = 1;
 
     scene.fog = new THREE.Fog(0x0b5394, 5, 180);
     // renderer.setClearColor(scene.fog.color);

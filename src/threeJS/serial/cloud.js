@@ -61,7 +61,7 @@ export class Cloud {
 
     animate(speed) {
         this.particles.forEach(p => {
-            p.rotation.z -= 0.001
+            p.rotation.z -= 0.002
             p.position.z -= speed
         })
         this.current -= speed;
