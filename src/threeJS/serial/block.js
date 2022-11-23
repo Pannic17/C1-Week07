@@ -47,7 +47,7 @@ export class Block {
                 // } );
                 let cube = new THREE.Mesh(
                     new THREE.BoxGeometry(width, height, length), material)
-                cube.position.set(x[j]+Math.random()*1.5-1, position[1]+height/2, z);
+                cube.position.set(x[j]+Math.random()*1.2-1, position[1]+height/2, z);
                 // console.log(this.buildings)
                 this.buildings.push(cube);
                 this.scene.add(cube);
