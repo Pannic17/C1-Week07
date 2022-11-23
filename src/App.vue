@@ -76,41 +76,36 @@ function initThree () {
   clock = new THREE.Clock ();
   light = new Lights (scene, gui);
 
-  new RGBELoader().load(
-      "/env.hdr",
-      function (texture) {
-        scene.environment = texture;
-        // scene.background = texture;
-        coupe1 = new Car ("/CC6_coupe.gltf", scene, [1, -2, -2], function () {
-          loaded[0] = true
-          coupe1.traverse ();
-          checkLoad ();
-        });
-        coupe2 = new Car ("/CC6_sedan.gltf", scene, [-1.1, -2, 1], function () {
-          loaded[1] = true
-          coupe2.traverse ();
-          checkLoad ();
-        });
-        coupe3 = new Car ("/CC6_sport.gltf", scene, [1.2, -2, 4], function () {
-          loaded[2] = true
-          coupe3.traverse ();
-          checkLoad ();
-        });
+  // scene.environment = texture;
+  // scene.background = texture;
+  coupe1 = new Car ("/CC6_coupe.gltf", scene, [1, -2, -2], function () {
+    loaded[0] = true
+    coupe1.traverse ();
+    checkLoad ();
+  });
+  coupe2 = new Car ("/CC6_sedan.gltf", scene, [-1.1, -2, 1], function () {
+    loaded[1] = true
+    coupe2.traverse ();
+    checkLoad ();
+  });
+  coupe3 = new Car ("/CC6_sport.gltf", scene, [1.2, -2, 4], function () {
+    loaded[2] = true
+    coupe3.traverse ();
+    checkLoad ();
+  });
 
-        // grid = new Grid(scene, far);
-        road = new Road (scene, far, 8, 8, 200);
-        cloud = new Cloud ("/smoke_1.png", scene, far);
-        block = new Block (scene, far);
+  // grid = new Grid(scene, far);
+  road = new Road (scene, far, 8, 8, 200);
+  cloud = new Cloud ("/smoke_1.png", scene, far);
+  block = new Block (scene, far);
 
-        // post = new Postprocessing(scene, renderer, camera, window.innerWidth*.96, window.innerWidth*.54)
+  // post = new Postprocessing(scene, renderer, camera, window.innerWidth*.96, window.innerWidth*.54)
 
-        let sphere = new THREE.Mesh (new THREE.IcosahedronGeometry (5, 8), new THREE.MeshBasicMaterial ());
-        sphere.position.set (0, -2, -2)
-        // scene.add( sphere );
+  let sphere = new THREE.Mesh (new THREE.IcosahedronGeometry (5, 8), new THREE.MeshBasicMaterial ());
+  sphere.position.set (0, -2, -2)
+  // scene.add( sphere );
 
-        console.log (scene)
-      }
-  )
+  console.log (scene)
 
 
 
@@ -233,9 +228,9 @@ onMounted (() => {
 <template>
   <div style="margin-left: 2vw">
     Week07 by PanNic&ensp;&ensp;Jiangyun Pan&ensp;&ensp;Press 'W' to accelerate, 'S' to slow down<br>
-    <a href="https://github.com/Pannic17/C1-Week07">on GitHub</a>&ensp;
-    <a href="https://git.arts.ac.uk/22044483/C1-Week07">on UAL Git</a>&ensp;
-    <a href="mailto:j.pan0520221@arts.ac.uk">j.pan0520221@arts.ac.uk</a>
+    <a href="https://github.com/Pannic17/C1-Week07">on GitHub</a>&ensp;&ensp;
+    <a href="https://git.arts.ac.uk/22044483/C1-Week07">on UAL Git</a>&ensp;&ensp;
+    <a href="mailto:j.pan0520221@arts.ac.uk">Please Wait Loading Models</a>
     <div id="three-canvas"></div>
   </div>
   <div>
