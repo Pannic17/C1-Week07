@@ -76,20 +76,20 @@ function initThree () {
   light = new Lights (scene, gui);
 
   let loader = new THREE.TextureLoader();
-  let texture = loader.load("/galaxy.png");
+  let texture = loader.load("./galaxy.png");
   scene.environment = texture;
   scene.background = texture;
-  coupe1 = new Car ("/CC6_coupe.gltf", scene, [1, -2, -2], function () {
+  coupe1 = new Car ("./CC6_coupe.gltf", scene, [1, -2, -2], function () {
     loaded[0] = true
     coupe1.traverse ();
     checkLoad ();
   });
-  coupe2 = new Car ("/CC6_sedan.gltf", scene, [-1.1, -2, 1], function () {
+  coupe2 = new Car ("./CC6_sedan.gltf", scene, [-1.1, -2, 1], function () {
     loaded[1] = true
     coupe2.traverse ();
     checkLoad ();
   });
-  coupe3 = new Car ("/CC6_sport.gltf", scene, [1.2, -2, 4], function () {
+  coupe3 = new Car ("./CC6_sport.gltf", scene, [1.2, -2, 4], function () {
     loaded[2] = true
     coupe3.traverse ();
     checkLoad ();
@@ -97,7 +97,7 @@ function initThree () {
 
   // grid = new Grid(scene, far);
   road = new Road (scene, far, 10, 8, 200);
-  cloud = new Cloud ("/smoke_1.png", scene, far);
+  cloud = new Cloud ("./smoke_1.png", scene, far);
   block = new Block (scene, far);
 
   // post = new Postprocessing(scene, renderer, camera, window.innerWidth*.96, window.innerWidth*.54)

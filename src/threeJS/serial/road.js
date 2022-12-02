@@ -24,8 +24,8 @@ export class Road {
 
     generate(position, width, length, size) {
         let loader = new THREE.TextureLoader();
-        let mapTexture = loader.load("/CC6_road.png");
-        let pbrTexture = loader.load("/CC6_map.png");
+        let mapTexture = loader.load("./CC6_road.png");
+        let pbrTexture = loader.load("./CC6_map.png");
         let material = new THREE.MeshStandardMaterial({
             map: mapTexture,
             // aoMAp: pbrTexture,

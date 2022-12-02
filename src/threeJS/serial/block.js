@@ -18,7 +18,7 @@ export class Block {
 
     generate(position, length, size) {
         let loader = new THREE.TextureLoader();
-        let texture = loader.load("/building_face.png");
+        let texture = loader.load("./building_face.png");
         let material = new THREE.MeshStandardMaterial({
             map: texture,
             depthTest: true,
